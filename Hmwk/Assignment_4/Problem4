@@ -1,0 +1,75 @@
+/* 
+ * File:   
+ * Author: 
+ * Created on 
+ * Purpose:  Creation of Template to be used for all
+ *           future projects
+ */
+
+//System Libraries
+#include <iostream>  //Input/Output Library
+using namespace std;
+
+//User Libraries
+
+//Global Constants, no Global Variables are allowed
+//Math/Physics/Conversions/Higher Dimensions - i.e. PI, e, etc...
+
+//Function Prototypes
+
+//Execution Begins Here!
+int main(int argc, char** argv) {
+    //Set the random number seed
+    
+    //Declare Variables
+    float num1;
+    float num2;
+    float num3;
+    
+    //Initialize or input i.e. set variable values
+    
+    //Map inputs -> outputs
+    cin>>num1>>num2>>num3;
+    
+    cout<<"Enter first number:"<<endl;
+    cout<<endl;
+    cout<<"Enter Second number:"<<endl;
+    cout<<endl;
+    cout<<"Enter third number:"<<endl;
+    cout<<endl;
+    
+    {
+        cout<<"Largest number from two parameter function:"<<endl;
+        if (num1>num2)
+        {
+            cout<<num1;
+            cout<<endl;
+        }
+        else
+        {
+            cout<<num2;
+            cout<<endl;
+        }
+    }
+    
+    {
+        cout<<endl;
+        cout<<"Largest number from three parameter function:"<<endl;
+        if (num1>num2&&num1>num3)
+        {
+            cout<<num1<<endl;
+        }
+        else if (num2>num1&&num2>num3)
+        {
+            cout<<num2<<endl;
+        }
+        else if (num3>num1&&num3>num2)
+        {
+            cout<<num3<<endl;
+        }
+    }
+    //Display the outputs
+
+    //Exit stage right or left!
+    return 0;
+}
