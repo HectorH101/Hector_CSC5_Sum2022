@@ -1,0 +1,53 @@
+/* 
+ * File:   main.cpp
+ * Author: Hector Hurtado
+ * Created on July 11, 2022
+ * Purpose:  Creation of Template to be used for all
+ *           future projects
+ */
+
+//System Libraries
+#include <iostream>  //Input/Output Library
+using namespace std;
+
+//User Libraries
+
+//Global Constants, no Global Variables are allowed
+//Math/Physics/Conversions/Higher Dimensions - i.e. PI, e, etc...
+
+//Function Prototypes
+
+//Execution Begins Here!
+int main(int argc, char** argv) {
+    //Set the random number seed
+    
+    //Declare Variables
+    string Run1, Run2, Run3;
+    int Time1, Time2, Time3;
+    
+    //Initialize or input i.e. set variable values
+    
+    //Map inputs -> outputs
+ Run1=="John";
+ Run2=="Jack";
+ Run3=="Jim";
+ Time1==99;
+ Time2==100;
+ Time3==101;
+    cout<<"Race Ranking Program"<<endl;
+    cout<<"Input 3 Runners"<<endl;
+    cin>>Run1>>Run2>>Run3;
+    cin>>Time1>>Time2>>Time3;
+   
+    //Display the outputs
+cout<<"Their names then their times"<<endl;
+ if (Time1<Time2&&Time1<Time3) cout<<" "<<Run1<<"  "<<Time1<<endl;
+ if (Time2<Time1&&Time2<Time3) cout<<" "<<Run2<<" "<<Time2<<endl;
+ if (Time3<Time1&&Time3<Time2) cout<<" "<<Run3<<" "<<Time3;
+cout<<" "<<Run2<<" "<<Time2<<endl;
+cout<<" "<<Run3<<" "<<Time3;
+
+
+    //Exit stage right or left!
+    return 0;
+}
