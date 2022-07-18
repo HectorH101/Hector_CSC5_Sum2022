@@ -1,0 +1,66 @@
+/* 
+ * File:   main.cpp
+ * Author: Hector Hurtado
+ * Created on July 11, 2022
+ * Purpose:  Creation of Template to be used for all
+ *           future projects
+ */
+
+//System Libraries
+#include <iostream>  //Input/Output Library
+#include <iomanip>
+using namespace std;
+
+//User Libraries
+
+//Global Constants, no Global Variables are allowed
+//Math/Physics/Conversions/Higher Dimensions - i.e. PI, e, etc...
+
+//Function Prototypes
+
+//Execution Begins Here!
+int main(int argc, char** argv) {
+    //Set the random number seed
+    
+    //Declare Variables
+    float Blnce; //Starting Balance
+    float MonFee; //Monthly Fee
+    int Check; //Number of checks
+    float CekFee; //Check Fee
+    float LowBal; //Low Balance Fee
+    float NewBal; //New Balance
+    
+    //Initialize or input i.e. set variable values
+    
+    //Map inputs -> outputs
+    cin>>Blnce;
+    cin>>Check;
+    MonFee=10;
+    {
+    if (Check<20)
+        CekFee=0.10 * Check;  //Check Fee if there is fewer than 20 checks
+    else if (Check>=20&&Check<40)
+        CekFee=0.08 * Check;  //Check Fee is there are between 20-39 checks
+    else if (Check>=40&&Check<60)
+    CekFee=0.06 * Check;      //Check Fee if there are betwen 40-59 checks
+    else CekFee=0.04 * Check; //Check Fee is there are 60 or more checks
+    }
+    {
+    if (Blnce<400)
+    LowBal=15;       //If Balance falls below 400, there is a $15 fee.
+    else LowBal=0;
+    NewBal=Blnce-CekFee-MonFee-LowBal;
+    
+    //Display the outputs
+cout<<fixed<<setprecision(2);
+cout<<"Monthly Bank Fees"<<endl;
+cout<<"Input Current Bank Balance and Number of Checks"<<endl;
+cout<<"Balance     $"<<setw(9)<<right<<Blnce<<endl;
+cout<<"Check Fee   $"<<setw(9)<<right<<CekFee<<endl;
+cout<<"Monthly Fee $"<<setw(9)<<right<<MonFee<<endl;
+cout<<"Low Balance $"<<setw(9)<<right<<LowBal<<endl;
+cout<<"New Balance $"<<setw(9)<<right<<NewBal;
+}
+    //Exit stage right or left!
+    return 0;
+}
