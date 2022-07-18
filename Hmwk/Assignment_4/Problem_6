@@ -1,0 +1,56 @@
+/* 
+ * File:   
+ * Author: 
+ * Created on 
+ * Purpose:  Creation of Template to be used for all
+ *           future projects
+ */
+
+//System Libraries
+#include <iostream>  //Input/Output Library
+#include <iomanip>   //format library
+using namespace std;
+
+//User Libraries
+
+//Global Constants, no Global Variables are allowed
+//Math/Physics/Conversions/Higher Dimensions - i.e. PI, e, etc...
+
+//Function Prototypes
+
+//Execution Begins Here!
+int main(int argc, char** argv) {
+    //Set the random number seed
+    
+    //Declare Variables
+    char choice;
+    short nLitrs, mlsTrvl;
+    float mpg;
+    
+    //Initialize or input i.e. set variable values
+    
+    //Map inputs -> outputs
+    
+    do{
+        
+    cout<<"Enter number of liters of gasoline:"<<endl<<endl;
+    cin>>nLitrs;
+    cout<<"Enter number of miles traveled:"<<endl<<endl;
+    cin>>mlsTrvl;
+    
+   mpg=mlsTrvl/0.264179/nLitrs;
+
+    
+    //Display the outputs
+ cout<<fixed<<setprecision(2)<<showpoint;
+ cout<<"miles per gallon:"<<endl;
+ cout<<mpg<<endl;
+ 
+ cout<<"Again:"<<endl;
+ cin>>choice;
+        if(choice=='y')cout<<endl;
+    }while(choice=='y');
+    
+    //Exit stage right or left!
+    return 0;
+}
