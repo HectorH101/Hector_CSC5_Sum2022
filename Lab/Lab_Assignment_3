@@ -1,0 +1,48 @@
+/* 
+ * File:   main.cpp
+ * Author: Hector Hurtado
+ * Created on July 8, 2022
+ * Purpose: Lab Assignment 3 Gas Tax
+ */
+
+//System Libraries
+#include <iostream>
+#include<iomanip>
+using namespace std;
+
+//User Libraries
+ 
+//Global Constants
+//Mathematical/Physics/Conversions, Higher dimensioned arrays
+
+//Function Prototypes
+
+//Execution Begins Here
+int main(int argc, char** argv) {
+    //Initialize the Random Number Seed
+    
+    //Declare Variables
+    float Cstpg; //cost of gas per galllon;
+    float PGT; //Percentage Gas Tax;
+    float tax; //tax collected by the government;
+    float aftrtax; //cost after tax;
+    float profit; //profit made;
+    
+    //User input
+    cout<<"How much did it cost you per gallon the last time you put gas in your car";
+    cin>>Cstpg;
+    
+    //Calculations
+    tax = (Cstpg*0.08) + 0.39 + 0.10 + 0.184; //8% sales tax, 39 cents for excise tax, 10 cent cap and trade fee, 18.4 cents federal excise tax
+    PGT = (tax / Cstpg) * 100; //percentage gas tax, taxes per gallon multiplied by 100
+    aftrtax = Cstpg - tax; //amount after tax is taken out
+    profit = aftrtax * 0.065; //6.5% oil company profit
+    
+    //Display Results
+    cout<<fixed<<setprecision(2)<<"Percentage Gas Tax on a gallon of gas = "<<PGT<<endl;
+    cout<<"Taxes to the government = $"<<tax<<endl;
+    
+    //Exit stage right
+    return 0;
+}
+
