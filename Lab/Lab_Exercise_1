@@ -1,0 +1,93 @@
+/* 
+ * File:   main.cpp
+ * Author: Hector Hurtado
+ * Created on June 30, 2022, 12:10 AM
+ * Purpose: Lab Exercise 1
+ */
+
+//System Libraries
+#include <iostream>
+using namespace std;
+
+//User Libraries
+
+//Global Constants
+//Mathematical/Physics/Conversions, Higher dimensional arrays
+
+//Function Prototypes
+
+//Execution Begins Here
+int main(int argc, char** argv) {
+    //Intialize the Random Number Seed
+    
+    //Declare Variables
+    short gPrcntge, //Input of gas gauge
+            szeGallon, //size of gas tank
+            mpg, // of miles per gallon
+            fill, //gas fill
+            gPrice, // gas price per gallon
+            cFill,// cost to fill tank
+            dstnceStation, //distance to gas station
+            cDistance, //cost of distance to and from gas station;
+            
+    //Initialize Variables
+    cout <<"What is the percentage of the gas gauge % ";
+    cin >> gPrcntge;
+    
+    cout <<"How many gallons does the vehicle hold ";
+    cin >> szeGallon;
+            
+    cout <<"What is the mpg of the vechile ";
+    cin >>mpg;
+            
+    fill = szeGallon-(szeGallon * (gPrcntge/100));
+    
+    //Map inputs to outputs -> the process
+    
+    //Display Results
+    cout <<"Gallons required to fill up: " << fill << endl;
+    cout << endl;
+    
+    //Initiaize Variables
+    cout <<"Calculate the cost of Gas Station 1" <<endl;
+    cout <<endl;
+    
+    cout <<"What is the price per gallon $";
+            cin >> gPrice;
+    cout <<"Miles to gas Station";
+    cin >> dstnceStation;
+            
+    cFill= gPrice * fill;
+    
+    cout <<:"Cost to fill up is: $" << cFill <<endl;
+    
+    cout << "What is the total miles from and to gas station ";
+    cin >>dstnceStation;
+    
+    cDistance = (dstnceStation/mpg) * gPrice;
+    
+    cout <<"Total cost to drive to Gas Station is $ " <<cDistance <<endl;
+    
+    cout <<"Calculate the cost of Gas Station 2" <<endl;
+    cout << endl;
+    
+    cout <<"What is the price per gallon $";
+    cin >> gPrice;
+    cout << "miles to gas station ";
+    cin >>dStation;
+    
+    cFill = gPrice * fill;
+    
+    cout <<fixed << setprecision (3);
+    cout << "Cost to fill up is: $" <<cFill <<endl;
+    
+    cout <<"What is the total miles from and to gas station ";
+    cin >> dstnceStation;
+    
+    cDistance = (dstnceStation/mpg)*gPrice;
+    cout <<fixed << setprecision (8);
+    cout << "total cost to drive to Gas station is $ " << cDistance <<endl;
+    
+    return 0;
+}
+
