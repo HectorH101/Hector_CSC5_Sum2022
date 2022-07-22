@@ -1,0 +1,62 @@
+/*
+* file: main.cpp
+*Author: Hector Hurtado
+* Created on July 21,2022
+*/
+
+//System Libraries
+#include <iostream>
+#include <iomanip> //Input/Output Library
+using namespace std;
+
+//Execution Begins Here
+int main(int argc, char** argv) {
+   
+   //Declare Variables
+   int hh, mm, hh1;
+   char AP, YN, space;
+
+  
+   cout << "Military Time Converter to Standard Time\n";
+       cout << "Input Military Time hh:mm\n";
+   
+   do {
+
+       cout << setfill('0') << setw(2);
+       
+       cin >> hh >> space >> mm; // User input 
+       
+       if (mm > 60){                                     // invalid time
+           cout << hh << ":" << mm << " is not a valid time\n";
+                   
+       }else if (hh > 24){                              // invalid time
+           cout << hh << ":" << mm << " is not a valid time\n";
+       } else if (hh == 12){                            // if hours is 12
+           cout << hh << ":" << mm << " = "; 
+           cout << hh << ":" << mm << " " <<"PM" << endl;
+       }
+       
+       else {
+       // 24 hour conversions 
+       if (hh > 12){
+           hh1 = hh%12;
+           AP = 'P';
+       }
+       if (hh <= 12){
+           hh1 = 12 - hh;
+           AP = 'A';
+       }
+       
+       // display results
+        cout <<hh << ":" << mm << " = ";
+       cout << hh1 << ":" << mm << " " << AP << "M" << endl;
+       
+       }
+         cout << "Would you like to convert another time (y/n)\n";
+         
+       cin >> YN;
+   }while (YN == 'y' || YN == 'Y');
+    
+    
+
+}
