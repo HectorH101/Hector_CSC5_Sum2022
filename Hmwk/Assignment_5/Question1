@@ -1,0 +1,56 @@
+/* 
+ * Author: 
+ * Created on 
+ * Purpose:  
+ */
+
+//System Libraries
+#include <iostream>
+using namespace std;
+
+//User Libraries
+
+//Global Constants - Math/Physics Constants, Conversions,
+//                   2-D Array Dimensions
+
+//Function Prototypes
+void minmax(int min,int max,int ,int&,int&);//Function to find the min and max
+
+//Execution Begins Here
+int main(int argc, char** argv) {
+    
+    //Declare Variables
+    int n1,n2,n3;
+    int min, max;
+    
+    //Initialize Variables
+    
+    //Process/Map inputs to outputs
+    cout<<"Input 3 numbers"<<endl;
+    cin>>n1>>n2>>n3;
+    
+    void minmax(int max); {
+        if (n1>n2&&n2>n3)
+        int max=n1;
+        else if (n2>n1&&n1>n3)
+        int max=n2;
+        else
+        int max=n3;
+    }
+    
+    void minmax(int min);{
+        if (n1<n2&&n2<n3)
+        int min=n1;
+        else if (n2<n1&&n1<n3)
+        int min=n2;
+        else 
+        int min=n3;
+    }
+    
+    //Output data
+    cout<<"Min = "<<n3<<endl;
+    cout<<"Max = "<<n2;
+    
+    //Exit stage right!
+    return 0;
+}
