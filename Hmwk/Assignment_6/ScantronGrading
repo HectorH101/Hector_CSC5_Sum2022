@@ -1,0 +1,84 @@
+/* 
+ * File:   main.cpp
+ * Author: hector hurtado
+ */
+
+//System Libraries
+#include <iostream>  //Input/Output Library
+#include <fstream>   //File I/O
+#include <string.h>    //String Library
+using namespace std;
+
+//User Libraries
+
+//Global Constants, no Global Variables are allowed
+//Math/Physics/Conversions/Higher Dimensions - i.e. PI, e, etc...
+
+//Function Prototypes
+void key(char [], int);               //key input
+void answers(char [], int);         //answers input
+void results(char [], char []);            //Output of the results
+
+
+//Execution Begins Here!
+int main(int argc, char** argv) {
+    //Set the random number seed
+    
+    //Declare Variables
+    int sizeOfKey = 23;        //Key size
+    int sizeOfAnsw = 27;       //Answer
+    char keys[sizeOfKey];                           
+    char answs[sizeOfAnsw];                        
+    
+    //Initialize or input i.e. set variable values
+    
+    //Score the exam
+    
+    //Display the outputs
+    key(keys, sizeOfKey);   
+    answers(answs, sizeOfAnsw);   
+    results(keys, answs); 
+    
+
+    //Exit stage right or left!
+    return 0;
+}
+
+void key(char keys[], int sizeOfKey)                //Key input function
+{
+    for (int count = 0; count < sizeOfKey; count++)     //Input loop
+    {
+        cin >> keys[count];                           //Key input array
+    }
+}
+
+void answers(char answs[], int sizeOfAnsw)          //Answer input function
+{
+    for (int count = 0; count < sizeOfAnsw; count++)    //Input loop
+    {
+        cin >> answs[count];                          //Answer input loop
+    }
+}
+
+void results(char keys[], char answs[])             //Output Function
+{
+    int countK = 3;                                   
+    int countA = 7;                                   
+    float correct = 0;                               
+    cout<<"C/W     ";                              
+    for (int count = 0; count < 20; count++)            
+    {
+        if (keys[countK++] == answs[countA++])        
+        {
+            cout << "C ";                             
+            correct++;                              
+        }
+        else                                       
+        {
+            cout << "W ";                             
+        }
+    }
+    cout << endl << "Percentage Correct = "<<(correct / 20 * 100) << "%" <<endl;   //Outputs percentage correct
+}
+
+
