@@ -1,0 +1,100 @@
+/* 
+ * File:   main.cpp
+ * Author: Hector Hurtado
+ * Created on July 19, 2022
+ * Purpose:  ISP charges
+ */
+
+//System Libraries Here
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+//User Libraries Here
+
+//Global Constants Only, No Global Variables
+//Like PI, e, Gravity, or conversions
+
+//Function Prototypes Here
+
+//Program Execution Begins Here
+int main(int argc, char** argv) {
+    //Declare all Variables Here
+    char package;
+    unsigned short hours;
+
+    //Input or initialize values Here
+    cout<<"ISP charges for service delivered."<<endl;
+    cout<<"Input package A,B,C then hours used for the month"<<endl;
+    cin>>package>>hours;
+
+    //Basic Charges
+float pckgA = 16.99;                                     //Package A
+    if(hours <= 10)
+        pckgA += 0;
+    else if(hours <= 20)
+        pckgA += (hours-10) * 0.95;
+   else
+       pckgA += (10 * 0.95) + ((hours - 20) * 0.85);
+
+float pckgB = 26.99;                                      //Package B
+    if(hours <= 20)
+        pckgB += 0;
+    else if(hours <= 30)
+        pckgB += (hours-20) * 0.74;
+    else
+        pckgB += (10 * 0.74) + ((hours - 30) * 0.64);
+        
+float pckgC = 36.99;                                     //Package C
+
+    cout << fixed << setprecision(2);
+
+
+    //Output the Charge
+    if(package == 'A' || package == 'a'){
+        cout<<"$"<<pckgA;
+
+    if(pckgC < pckgB && pckgC < pckgB){
+        cout<<" C $"<<(pckgA - pckgC)<<endl;
+    }
+
+    else if(pckgB < pckgA){
+        cout<<" B $"<<(pckgB - pckgA)<< endl;
+}
+
+    else{
+        cout<<" A $"<<(pckgA - pckgA)<< endl;
+}
+}
+    else if(package == 'B' || package == 'b'){
+        cout<<"$"<<pckgB;
+
+    if(pckgC < pckgA && pckgC < pckgB){
+        cout<<" C $"<<(pckgB - pckgC)<<endl;
+}
+    else if(pckgA < pckgB){
+        cout<<" A $"<<(pckgB - pckgA)<<endl;
+} 
+
+    else{
+        cout<<" B $"<<(pckgB - pckgB)<<endl;
+}
+}
+    else{
+
+        cout<<"$"<<pckgC;
+
+    if(pckgC > pckgA && pckgC > pckgB){
+
+        cout<<" B $"<<(pckgC - pckgB)<<endl;
+}
+    else if(pckgC > pckgA){
+       cout<<" A $"<<(pckgC - pckgA)<<endl;
+}
+else{
+    cout<<" C $"<<(pckgC - pckgC)<<endl;
+}
+}
+    //Exit
+    return 0;
+}
