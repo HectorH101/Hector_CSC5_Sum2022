@@ -1,0 +1,45 @@
+/* 
+ * File:   main.cpp
+ * Author: Hector Hurtado
+ * Created on July 18, 2022
+ * Purpose:  Overtime
+ */
+
+//System Libraries Here
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+//User Libraries Here
+
+//Global Constants Only, No Global Variables
+//Like PI, e, Gravity, or conversions
+
+//Function Prototypes Here
+
+//Program Execution Begins Here
+int main(int argc, char** argv) {
+    //Declare all Variables Here
+    float payRate;
+    unsigned short hrsWrkd;
+    
+    //Input or initialize values Here
+    cout<<"Paycheck Calculation."<<endl;
+    cout<<"Input payRate in $'s/hour and hours worked"<<endl;
+    cin>>payRate>>hrsWrkd;
+    
+    //Calculate Paycheck
+if (hrsWrkd<=20)
+cout<<"$"<<payRate * hrsWrkd<<".00"<<endl;                                              //If worked less than 20 hours
+else if (hrsWrkd>20&&hrsWrkd<=40)
+cout<<"$"<<(payRate*20)+((hrsWrkd-20)*(payRate*1.5))<<".00"<<endl;                      //If worked more than 20 but less than 40 hours
+else
+cout<<"$"<<(payRate*20)+(20*(payRate*1.5))+((hrsWrkd-40)*(payRate*2))<<".00"<<endl;     //If worked more than 40 hours
+
+    
+    //Output the check
+    
+    
+    //Exit
+    return 0;
+}
