@@ -1,0 +1,55 @@
+/* 
+ * File:   main.cpp
+ * Author: Hector Hurtado
+ * Created on DATE AND TIME HERE
+ * Purpose:  Infinite Series
+ */
+
+//System Libraries Here
+#include <iostream>
+#include <iomanip>
+#include<cmath>
+using namespace std;
+
+//User Libraries Here
+
+//Global Constants Only, No Global Variables
+//Like PI, e, Gravity, or conversions
+
+//Function Prototypes Here
+int Factorial (int n){     //factorial calculation
+    int fact=1;
+    int i;                //variable for loop
+ if (n==0)
+    fact =1;
+else 
+    for (i=1;i<=n; i++)
+    fact=fact*i;
+    return fact;
+}
+//Program Execution Begins Here
+int main(int argc, char** argv) {
+    //Declare all Variables Here
+    float term,value=0;
+    int nterms,j,i,x;
+    
+    //Input or initialize values Here
+    cout<<"Calculate a series f(x)=x-x^3/3!+x^5/5!-x^7/7!+......."<<endl;
+    cout<<"Input x and the number of terms, output f(x)"<<endl;
+    cin>>x>>nterms;
+    
+    //Calculate Sequence sum here
+for (i=1; i<=nterms; i++){
+    term = pow(x,2*i-1) / Factorial(2*i-1);
+    if (i%2==0)
+    term=-term;
+    value=value+term;
+}
+cout<<fixed<<setprecision(6)<<value<<endl;
+    
+    //Output the result here
+
+    
+    //Exit
+    return 0;
+}
