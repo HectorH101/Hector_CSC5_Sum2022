@@ -1,0 +1,88 @@
+/* 
+ * File:   main.cpp
+ * Author: Hector Hurtado
+ * Created on DATE AND TIME HERE
+ * Purpose:  Histogram
+ */
+
+//System Libraries Here
+#include <iostream>
+using namespace std;
+
+//User Libraries Here
+
+//Global Constants Only, No Global Variables
+//Like PI, e, Gravity, or conversions
+
+//Function Prototypes Here
+
+//Program Execution Begins Here
+int main(int argc, char** argv) {
+    //Declare all Variables Here
+char d1,d2,d3,d4;
+float input;
+int thusnd, hund, tens, ones;
+
+    //Input or initialize values Here
+    cout<<"Create a histogram chart."<<endl;
+    cout<<"Input 4 digits as characters."<<endl;
+cin>>d1>>d2>>d3>>d4;
+
+thusnd=d1-48;
+hund=d2-48;
+tens=d3-48;
+ones=d4-48;
+    
+    //Histogram Here
+
+//Ones
+if (ones>=0&&ones<=9){
+    cout<<ones<<" ";
+    for (int count=1; count<=ones; count++){
+        cout<<"*";
+    }
+    cout<<endl;
+}
+else{
+    cout<<d4<<" ?"<<endl;
+}
+
+//Tens
+if (tens>=0&&tens<=9){
+    cout<<tens<<" ";
+    for (int count=1; count<=tens; count++){
+        cout<<"*";
+    }
+    cout<<endl;
+}
+else{
+    cout<<d3<<" ?"<<endl;
+}
+
+//Hundreds
+if (hund>=0&&hund<=9){
+    cout<<hund<<" ";
+    for (int count=1; count<=hund; count++){
+        cout<<"*";
+    }
+    cout<<endl;
+}
+else{
+    cout<<d2<<" ?"<<endl;
+}
+
+//Thousands
+if (thusnd>=0&&thusnd<=9){
+    cout<<thusnd<<" ";
+    for (int count=1; count<=thusnd; count++){
+        cout<<"*";
+    }
+cout<<endl;
+}
+else{
+    cout<<d1<<" ?"<<endl;
+}
+    
+    //Exit
+    return 0;
+}
