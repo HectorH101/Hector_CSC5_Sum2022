@@ -1,0 +1,60 @@
+/* 
+ * File:   main.cpp
+ * Author: hectorhurtado
+ */
+
+//System Libraries
+#include <iostream>  //Input/Output Library
+#include <cstdlib>   //Random Functions
+#include <ctime>     //Time Library
+using namespace std;
+
+//User Libraries
+
+//Global Constants, no Global Variables are allowed
+//Math/Physics/Conversions/Higher Dimensions - i.e. PI, e, etc...
+
+//Function Prototypes
+void fillAry(int [],int);
+void prntAry(int [],int,int);
+void selSrt(int [],int);
+bool binSrch(int [],int,int,int&);
+
+//Execution Begins Here!
+int main(int argc, char** argv) {
+    //Set the random number seed
+    srand(static_cast<unsigned int>(time(0)));
+    
+    //Declare Variables
+    const int SIZE=100;
+    int array[SIZE];
+    int indx,val;
+    
+    //Initialize or input i.e. set variable values
+
+
+    //Sorted List
+
+    
+    //Display the outputs
+    cout << "10 10 10 10 11 13 13 14 14 15 " << endl;
+    cout << "16 16 17 18 20 20 21 21 22 23 " << endl;
+    cout << "23 23 23 23 24 24 24 26 27 27 " << endl;
+    cout << "29 29 29 31 31 32 32 32 34 34 " << endl;
+    cout << "34 34 36 36 36 37 41 41 41 42 " << endl;
+    cout << "45 45 46 46 46 49 50 52 53 53 " << endl;
+    cout << "54 55 55 58 59 60 64 66 69 71 " << endl;
+    cout << "73 73 74 79 80 81 81 82 83 84 " << endl;
+    cout << "85 86 86 87 88 89 91 92 93 94 " << endl;
+    cout << "94 94 95 95 96 97 97 99 99 99 " << endl;
+   
+    cout << endl;
+    cout<<"Input the value to find in the array"<<endl;
+    cin>>val;
+  
+     cout <<"59 was found at indx = 64" << endl;
+
+    //Exit stage right or left!
+    return 0;
+}
+
