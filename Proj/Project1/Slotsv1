@@ -1,0 +1,67 @@
+/* 
+ * File:   main.cpp
+ * Author: hector hurtado
+ * Created on July 22, 2022
+ * Purpose: Slots Project
+ */
+
+//System Libraries
+#include <cstdlib>
+#include <iostream>
+using namespace std;
+
+//User Libraries
+
+//Global Constants
+
+//Execution Begins Here
+
+int main(int argc, char**argv) {
+    
+int slots;{
+    
+//Declare Variables
+        int chips=100;
+        char YorN;
+        int slotPay;
+        
+//Initialize Variables
+    
+//Map Inputs to Outputs
+do{
+    
+cout<<"Welcome to Slots!"<<endl;
+cout<<"You currently have "<<chips<<"chips"<<endl;
+           
+slotPay=chips+-5;
+        
+        cout<<endl<<endl<<endl<<endl<<endl;
+        cout<<"----------------"<<endl;
+        
+        srand(time(0));
+        
+        for (int i=0;i<2;i++)
+        cout<<" "<<(rand()%6)<<" ";
+        cout<<" "<<(rand()%6)<<" "<<endl;
+        cout<<" "<<(rand()%6)<<" ";
+        cout<<" "<<(rand()%6)<<" ";
+        cout<<" "<<(rand()%6)<<" "<<endl;
+        cout<<" "<<(rand()%6)<<" ";
+        cout<<" "<<(rand()%6)<<" ";
+        cout<<" "<<(rand()%6)<<" "<<endl;
+        cout<<"-------------"<<endl;
+        
+        cout<<"You now have "<<chips<<"chips"<<endl;
+        
+        cout<<"Would you like to play again?"<<endl;
+        cout<<"Enter Y to play again or N to quit."<<endl;
+        cin>>YorN;
+        
+        cout<<endl<<endl<<endl<<endl<<endl<<endl
+             <<endl<<endl<<endl<<endl<<endl<<endl;
+    } while(YorN=='Y');    
+        
+     //Exit stage right or left
+        return 0;
+    }
+}
