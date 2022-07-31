@@ -1,0 +1,59 @@
+/* 
+ * File:   main.cpp
+ * Author: hector hurtado
+ */
+
+//System Libraries
+#include <iostream>  //Input/Output Library
+#include <cstdlib>   //Srand
+#include <ctime>     //Time to set random number seed
+#include <cmath>     //Math Library
+#include <iomanip>   //Format Library
+using namespace std;
+
+//User Libraries
+
+//Global Constants, no Global Variables are allowed
+//Math/Physics/Conversions/Higher Dimensions - i.e. PI, e, etc...
+const int SIZE=50; 
+
+//Function Prototypes
+
+
+//Execution Begins Here!
+int main(int argc, char** argv) {
+    //Set the random number seed
+    srand(static_cast<unsigned>(time(0)));
+    
+    //Declare Variables
+    
+    int numbers[50];      //size of array  
+    int cols=0; 
+    
+    //Initialize or input i.e. set variable values
+     for (int count=0; count<SIZE; count++)          
+    {
+        cin>>numbers[count];                        
+    }
+    
+    //Display the outputs
+    for (int count=49; count>=0; count--)           //Loop for reversed array 
+    {
+        cout<<numbers[count]<<" ";                 
+        cols++;                                     
+        if (cols>9)                               
+        {
+            cout<<endl;
+            cols=0;
+        }
+    }
+    
+    //Reverse the Values
+ 
+    //Display the outputs
+   
+    //Exit stage right or left!
+    return 0;
+}
+
+
