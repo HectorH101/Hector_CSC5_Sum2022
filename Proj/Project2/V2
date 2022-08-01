@@ -1,0 +1,163 @@
+/* 
+ * File:   main.cpp
+ * Author: hector hurtado
+ * Created on July 30, 2022
+ * Purpose: Slots Project
+ */
+
+//System Libraries
+#include <cstdlib>
+#include <iostream>
+using namespace std;
+
+//User Libraries
+
+//Global Constants
+
+//Declare Variables
+    char YorN;
+    
+//Initialize Variables
+    
+//Map Inputs to Outputs
+    
+ //Slots Game
+    
+    int slots () {
+        int slotPay;
+        
+        //Amount of chips for slots
+        int chips=100;
+        slotPay=chips+-5;
+        
+        cout<<endl<<endl<<endl<<endl<<endl;
+        
+        cout<<"Welcome to Slots"<<endl;
+        cout<<"----------------"<<endl;
+        
+        //Random numbers
+        srand(time(0));
+        
+        for (int i=0;i<2;i++)
+            
+        cout<<" "<<(rand()%6)<<" ";
+        cout<<" "<<(rand()%6)<<" "<<endl;
+        cout<<" "<<(rand()%6)<<" ";
+        cout<<" "<<(rand()%6)<<" ";
+        cout<<" "<<(rand()%6)<<" "<<endl;
+        cout<<" "<<(rand()%6)<<" ";
+        cout<<" "<<(rand()%6)<<" ";
+        cout<<" "<<(rand()%6)<<" "<<endl;
+        
+        cout<<"-------------"<<endl;
+        
+        cout<<"You now have "<<chips<<"chips"<<endl;
+        cout<<endl;
+        
+        //Ask the player if they want to play slots again
+        cout<<"Would you like to play again?"<<endl;
+        cout<<"Enter Y to play again or N to quit."<<endl;
+        
+        //Player inputs yes or no
+        cin>>YorN;
+        
+        //If player chooses yes:
+     if (YorN=='Y') 
+     {
+         cout<<endl<<endl<<endl<<endl<<endl<<endl
+             <<endl<<endl<<endl<<endl<<endl<<endl;
+         slots();
+         //Rerun the game
+     }   
+        
+        //if player chooses not to play again:
+     else
+        cout<<endl<<endl<<endl<<endl<<endl<<endl
+             <<endl<<endl<<endl<<endl<<endl<<endl;
+        return 0;
+        //Return to the main
+   
+    }
+    
+    //Craps game
+    int craps() 
+    {
+        cout<<endl<<endl<<endl<<endl<<endl<<endl;
+        
+        cout<<"Welcome to Craps"<<endl;
+        cout<<"The dice were thrown and are shown below:"<<endl;
+        
+        //Random Numbers
+        srand(time(0));
+        
+        for (int i=0;i<1;i++)
+            
+            cout<<" "<<(rand()%6)<<" ";
+            cout<<" "<<(rand()%6)<<" "<<endl;
+            cout<<endl;
+            
+            //Ask the player if they want to play craps again
+            cout<<"Would you like to play again?"<<endl;
+            cout<<"Enter Y to play again or N to quit."<<endl;
+            
+            //Player Inputs yes or no
+            cin>>YorN;
+            
+            //If the player chooses to play again
+            if (YorN=='Y') 
+            {
+                cout<<endl<<endl<<endl<<endl<<endl<<endl
+             <<endl<<endl<<endl<<endl<<endl<<endl;
+                craps();
+                //Rerun the game
+            }
+            
+            //If the player doesn't want to play again
+            else
+            cout<<endl<<endl<<endl<<endl<<endl<<endl
+             <<endl<<endl<<endl<<endl<<endl<<endl;
+            
+            //return to the main
+            return 0;
+            return 0;
+    }
+    
+    //Execution Begins Here
+    int main () {
+        
+    //Variables
+        int chips=100;
+        char gameChoice;
+        
+    //Inputs to Outputs
+        cout<<"Welcome to Game Casino!"<<endl;
+        cout<<endl;
+        
+        cout<<"You currently have "<<chips<<"chips"<<endl;
+        cout<<endl;
+        
+        //Ask the player which game they want to play
+        cout<<"Enter the game you would like to play:"<<endl;
+        cout<<"Slots or Craps"<<endl;
+        cout<<"Enter S to play slots or enter C to play craps"<<endl;
+        
+        //Player input to choose which game
+        cin>>gameChoice;
+        
+        //If player chooses slots
+        if (gameChoice=='S') 
+        {
+            int slotPay;
+            slotPay=chips +-5;
+            slots();
+            main();
+            return 0;
+        }
+        
+        //If player chooses craps
+        else (gameChoice=='C'); {
+            craps ();
+            main();
+            return 0;
+                            }
+    }
