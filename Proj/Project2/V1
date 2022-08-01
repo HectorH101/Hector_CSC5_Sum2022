@@ -1,0 +1,117 @@
+/* 
+ * File:   main.cpp
+ * Author: hector hurtado
+ * Created on July 24, 2022
+ * Purpose: Slots Project
+ */
+
+//System Libraries
+#include <cstdlib>
+#include <iostream>
+using namespace std;
+
+//User Libraries
+
+//Global Constants
+
+//Execution Begins Here
+
+
+//Declare Variables
+    char YorN;
+    
+//Initialize Variables
+    
+//Map Inputs to Outputs
+    
+    int slots () {
+        int slotPay;
+        
+        int chips=100;
+        slotPay=chips+-5;
+        
+        cout<<endl<<endl<<endl<<endl<<endl;
+        cout<<"Welcome to Slots"<<endl;
+        cout<<"----------------"<<endl;
+        
+        srand(time(0));
+        
+        for (int i=0;i<2;i++)
+            cout<<" "<<(rand()%6)<<" ";
+        cout<<" "<<(rand()%6)<<" "<<endl;
+        cout<<" "<<(rand()%6)<<" ";
+        cout<<" "<<(rand()%6)<<" ";
+        cout<<" "<<(rand()%6)<<" "<<endl;
+        cout<<" "<<(rand()%6)<<" ";
+        cout<<" "<<(rand()%6)<<" ";
+        cout<<" "<<(rand()%6)<<" "<<endl;
+        cout<<"-------------"<<endl;
+        
+        cout<<"You now have "<<chips<<"chips"<<endl;
+        
+        cout<<"Would you like to play again?"<<endl;
+        cout<<"Enter Y to play again or N to quit."<<endl;
+        cin>>YorN;
+        
+     if (YorN=='Y') {
+         cout<<endl<<endl<<endl<<endl<<endl<<endl
+             <<endl<<endl<<endl<<endl<<endl<<endl;
+         slots();
+     }   
+     else
+        cout<<endl<<endl<<endl<<endl<<endl<<endl
+             <<endl<<endl<<endl<<endl<<endl<<endl;
+        return 0;
+    }
+    
+    int craps() {
+        cout<<endl<<endl<<endl<<endl<<endl<<endl;
+        cout<<"Welcome to Craps"<<endl;
+        cout<<"The dice were thrown and are shown below:"<<endl;
+        
+        srand(time(0));
+        
+        for (int i=0;i<1;i++)
+            cout<<" "<<(rand()%6)<<" ";
+            cout<<" "<<(rand()%6)<<" "<<endl;
+            cout<<"Would you like to play again?"<<endl;
+            cout<<"Enter Y to play again or N to quit."<<endl;
+            cin>>YorN;
+            
+            if (YorN=='Y') {
+                cout<<endl<<endl<<endl<<endl<<endl<<endl
+             <<endl<<endl<<endl<<endl<<endl<<endl;
+                craps();
+            }
+            else
+            cout<<endl<<endl<<endl<<endl<<endl<<endl
+             <<endl<<endl<<endl<<endl<<endl<<endl;
+            
+            return 0;
+            return 0;
+    }
+    
+    int main () {
+    //Variable
+        double chips=100;
+        int gmeChoice;
+        
+        cout<<"Welcome to Game Casino"<<endl;
+        cout<<"You currently have "<<chips<<"chips"<<endl;
+        cout<<"Enter the game you would like to play"<<endl;
+        cout<<"Slots or Craps"<<endl;
+        
+        cin>>gmeChoice;
+        if (gmeChoice<2) {
+            int slotPay;
+            slotPay=chips +-5;
+            slots();
+            main();
+            return 0;
+        }
+        else (gmeChoice>1); {
+            craps ();
+            main();
+            return 0;
+                            }
+    }
