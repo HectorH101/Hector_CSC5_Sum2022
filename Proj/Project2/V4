@@ -1,0 +1,256 @@
+/* 
+ * File:   main.cpp
+ * Author: Hector Hurtado
+ * Created on July 30, 2022
+ * Purpose: Slots Project
+ */
+
+//System Libraries
+#include <cstdlib>
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+#include <cstring>
+#include <ctime>
+
+using namespace std;
+
+//User Libraries
+
+//Global Constants
+
+//Declare Variables
+    int nums;
+    int rows=3;
+    int cols=3;
+    int COLMAX=3;
+    
+    //So the player can choose yes or no
+    //for input
+    char YorN;
+    
+//Initialize Variables
+    
+//Map Inputs to Outputs
+    
+ //Slots and Craps Games
+    
+ //Slots Game
+    
+    int slots () {
+        int slotPay;
+        
+        //Arrays
+        int nums[3] = {rand()%6, rand()%6, rand()%6};
+        int nums2[3] = {rand()%6, rand()%6, rand()%6};
+        int nums3[3] = {(rand()%6), (rand()%6), (rand()%6)};
+        
+        //Amount of chips for slots
+        int chips=100;
+        slotPay=chips+-5;
+        
+        cout<<endl<<endl<<endl<<endl<<endl;
+        
+        cout<<"Welcome to Slots!"<<endl;
+        
+        cout<<"----------------"<<endl;
+        
+        //Random numbers
+        srand(time(0));
+        {
+        void print (char arr[][COLMAX], int rows, int cols);
+        {
+        int nums[3];
+        for (int i=0;i<cols;i++){
+            cout<<" "<<nums[3]<<" ";
+        }
+        }
+                       }
+        
+        cout<<endl;
+        
+        srand (time(0));
+        {
+        void print (char arr[][COLMAX], int rows, int cols);
+        {
+        int nums2[3];
+        for (int i=0;i<cols;i++){
+            cout<<" "<<nums[i]<<" ";
+        }
+        }
+                        }
+       
+        cout<<endl;
+        
+        srand (time(0));
+        {
+            void print (char arr[][COLMAX], int rows, int cols);
+        {
+        int nums3[3];
+        for (int i=0;i<cols;i++){
+            cout<<" "<<nums2[i]<<" ";
+        }
+        }
+                        }             
+       
+        cout<<endl;
+       
+        cout<<"-------------"<<endl;
+        
+        cout<<"You now have "<<chips<<" chips."<<endl;
+        cout<<endl;
+        
+        //Ask the player if they want to play slots again
+        cout<<"Would you like to play again?"<<endl;
+        
+        cout<<"Enter Y to play again or N to return home."<<endl;
+        
+        //Player inputs yes or no
+        cin>>YorN;
+        
+        //If player chooses yes:
+     if (YorN=='Y') 
+     {
+         cout<<endl<<endl<<endl
+             <<endl<<endl<<endl
+             <<endl<<endl<<endl
+             <<endl<<endl<<endl;
+         slots();
+         //Rerun the game
+     }   
+        
+        //if player chooses not to play again:
+     else if (YorN=='N')
+     {
+        cout<<endl<<endl<<endl
+            <<endl<<endl<<endl
+            <<endl<<endl<<endl
+            <<endl<<endl<<endl;
+     
+        //Return to the main
+        return 0;
+     }
+     
+    //If player chooses anything else, finish run
+     else
+     {
+       void exit ();
+     }
+    }
+    
+    //Craps game
+    int craps() 
+    {
+        cout<<endl<<endl<<endl
+            <<endl<<endl<<endl;
+        
+        cout<<"Welcome to Craps"<<endl;
+        
+        cout<<"The dice were thrown and are shown below:"<<endl;
+        
+        //Random Numbers
+        srand(time(0));
+        
+        for (int i=0;i<1;i++)
+            
+            cout<<" "<<(rand()%6)<<" ";
+            cout<<" "<<(rand()%6)<<" "<<endl;
+            
+            cout<<endl;
+            
+            //Ask the player if they want to play craps again
+            cout<<"Would you like to play again?"<<endl;
+            
+            cout<<"Enter Y to play again or N to return home."<<endl;
+            
+            //Player Inputs yes or no
+            cin>>YorN;
+            
+            //If the player chooses to play again
+            if (YorN=='Y') 
+            {
+                cout<<endl<<endl<<endl
+                    <<endl<<endl<<endl
+                    <<endl<<endl<<endl
+                    <<endl<<endl<<endl;
+                
+                //Rerun the game
+                craps();
+            }
+            
+            //If the player doesn't want to play again
+            else if (YorN=='N')
+            {
+            cout<<endl<<endl<<endl
+                <<endl<<endl<<endl
+                <<endl<<endl<<endl
+                <<endl<<endl<<endl;
+            
+            //return to the main
+            return 0;
+            
+            return 0;
+            }
+            
+            //If player chooses anything else, finish run
+     else
+     {
+       void exit ();
+     }
+    }
+    
+    //Execution Begins Here
+    int main () {
+        
+    //Variables
+        int chips;
+        char gameChoice;
+        
+    //Initialize Variables
+        chips=100;
+        
+    //Inputs to Outputs
+        cout<<"Welcome to Game Casino!"<<endl;
+        cout<<endl;
+        
+        cout<<"You currently have "<<chips<<"chips"<<endl;
+        cout<<endl;
+        
+        //Ask the player which game they want to play
+        cout<<"Enter the game you would like to play:"<<endl;
+        
+        cout<<"Slots or Craps"<<endl;
+        
+        cout<<"Enter S to play slots or enter C to play craps"<<endl;
+        
+        //Player input to choose which game
+        cin>>gameChoice;
+        
+        //If player chooses slots
+        if (gameChoice=='S') 
+        {
+            //Take player to slots game
+            int slotPay;
+            slotPay=chips +-5;
+            slots();
+            main();
+            return 0;
+        }
+        
+        //If player chooses craps
+        else if (gameChoice=='C') 
+        {
+            //Take player to craps game
+            craps ();
+            main();
+            return 0;
+                                   }
+        
+        //If player chooses anything else
+        //finish run
+        else
+        {
+            void exit ();
+        }
+                            
+    }
